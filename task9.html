@@ -1,0 +1,59 @@
+//write a function that takes the input string and reverses it
+
+function reverseThisString(string) {
+  let splitString = string.split("");
+  let reverseString = splitString.reverse();
+  return reverseString.join("");
+}
+
+//write a function that takes the input string and switches all uppercase characters to lowercase and lowercase charcaters to uppercase
+
+function swapCase(string) {
+  let newString = "";
+  for (let i = 0; i < string.length; i++) {
+    const c = string[i];
+    if (c === c.toLowerCase()) {
+      newString += c.toUpperCase();
+    } else if (c === c.toUpperCase()) {
+      newString += c.toLowerCase();
+    }
+  }
+  
+// convert array of numbers from farenheit to celcius
+ 
+ function toCelcius(array) {
+  return array.map((t) => ((t - 32) * 5) / 9);
+}
+
+//write a function that takes an input array and returns an array of booleans (>=75) or fail (<75)
+
+function pass(array) {
+  return array.map((marks) => marks >+= 75);
+}
+
+function germanNumbers(){
+const Numbers = [2,3,4,5,6];
+const germanNumber = ['zwei', 'drei', 'vier', 'fünf', 'sechs'];
+
+var newArray = new Array();
+
+cardinalNumbers.forEach((num, i) => {
+  const german = germanNumber[i];
+  newArray.push(num + ' is ' + german);
+});
+
+return newArray;
+
+}
+
+// write code that returns an array of ONLY prime numbers that are in the array numbers
+
+function PrimeNumbers(){
+
+var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+numbers = numbers.filter((no) => {
+  for (var i = 2; i <= Math.sqrt(no); i++) {
+    if (no % i === 0) return false;
+  }
+  return true;
+});
